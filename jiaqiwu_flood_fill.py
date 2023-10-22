@@ -64,6 +64,18 @@ def flood_fill(input_board: List[str], old: str, new: str, x: int, y: int) -> Li
 
 
 def dfs(board_arr: List[List[str]], x: int, y: int, row: int, col: int, old: str, new: str):
+    """
+    Perform depth-first search (DFS) to flood-fill a region of the board.
+
+    Args:
+        board_arr (List[List[str]]): The board represented as a list of lists.
+        x (int): The x-coordinate of the current cell.
+        y (int): The y-coordinate of the current cell.
+        row (int): The number of rows in the board.
+        col (int): The number of columns in the board.
+        old (str): The value to be replaced.
+        new (str): The value that replaces the old value.
+    """
     # Mark the current cell as 'new'
     board_arr[x][y] = new
     for direct in directions:
